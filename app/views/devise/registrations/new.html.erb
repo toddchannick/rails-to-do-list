@@ -1,0 +1,29 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "form-boot"}) do |f| %>
+  <%= devise_error_messages! %>
+  <h3 class="media-heading caps">Sign Up</h3><br>
+  
+  <div class="form-group">
+    <%= f.label :name, 'Name', class: 'sr-only' %>
+    <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: 'Name' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, 'Email Address', class: 'sr-only' %>
+    <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, 'Password', class: 'sr-only' %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password (8 characters minimum)' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation,'Password Confirmation', class: 'sr-only' %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Retype Password' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Sign up", class: 'btn btn-primary hvr-icon-forward' %>
+  </div>
+  <%= render "devise/shared/links" %>
+<% end %>

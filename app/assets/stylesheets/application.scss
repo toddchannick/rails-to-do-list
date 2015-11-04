@@ -1,0 +1,208 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+body {
+  padding-top:8em;
+  position:relative;
+}
+
+.navbar-nav {
+  margin-bottom:0px !important;
+}
+
+
+.top-bar {
+  min-width:695px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top: 10px;
+  padding-bottom:8px;
+  border-radius:0px !important;
+  background-color: #71D690 !important;
+  color:white;
+  font-weight:200;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4),inset 0 -1px 0 rgba(0,0,0,0.2);
+  a {
+    color:#132117;
+  }
+  a:hover {
+    color:#060A07
+  }
+}
+
+.nav-left {
+  position:relative;
+  padding-top: 15px;
+  a {
+    position:relative;
+    float:left;
+  }
+}
+
+.nav-right {
+  padding-top: 15px;
+  li {
+    padding-left:5px;
+    display:inline-block;
+    list-style: none;
+  }
+}
+
+.navbar-brand {
+  i {
+    font-size: 2em;
+    padding-bottom:5px;
+  }
+}
+
+.page-content {
+  position:relative;
+  padding-top:15px;
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#logged-in {
+  margin-left:0px !important;
+  color:black;
+  position:relative;
+  text-align:right;
+  li {
+    display: list-item;
+  }
+}
+
+#not-logged-in {
+  margin-left:0px !important;
+  color:black;
+  position:relative;
+  text-align:right;
+  li {
+    display: inline-block;
+  }
+}
+
+#acct-options {
+  margin-top:5px;
+  li {
+    display:inline-block;
+    float:left;
+  }
+}
+
+#strong-title {
+  color:white;
+}
+
+.caps {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.link-caps, .link-caps:hover {
+  color:black;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+#spaced {
+  font-weight:200;
+  font-style: italic;
+  margin-left:4px;
+  letter-spacing: 3.5px;
+}
+
+.btn {
+  border: 0 none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.btn-primary {
+  background-color: #71D690 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background-color: #2C3629 !important;
+ }
+
+.btn-primary:active, .btn-primary.active {
+  background-color: #2C3629 !important;
+  box-shadow: none;
+ }
+
+.btn-default {
+  background-color: #e6e6e6;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+  background-color: #2C3629 !important;
+  color:white;
+ }
+
+.btn-default:active, .btn-default.active {
+  background-color: #2C3629 !important;
+  color:white;
+  box-shadow: none;
+ }
+
+#devise-links {
+  margin-top:5px;
+}
+
+.row {
+    display: table;
+    width:100%;
+}
+
+[class*="col-"] {
+    display: table-cell;
+    float:none;
+    vertical-align: bottom;
+}
+
+.media {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.form-boot {
+  margin-left:auto;
+  margin-right:auto;
+  width:450px;
+}
+
+.shadow {
+  text-shadow: 2px   2px  3px   rgba(0,0,0,0.2);
+}
+
+input, textarea, select, a {
+  outline: none;
+}

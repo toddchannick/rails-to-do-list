@@ -1,18 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsToDoList</title>
+  <title>Priorit-Ease</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="container-fluid">
+    <div class="navbar navbar-fixed-top top-bar">
 
+      <div class="row">
+        <div class="nav-left col-xs-6">
+          <a class="navbar-brand" href="/">
+            <i class="fa fa-calendar-check-o"></i>
+          </a>
+          <div class="media">
+            <h2 class="media-heading caps shadow">Priorit<span id="spaced">ease</span></h2>
+            <span class="sub-text">Simplified to-do lists for the busy mind</span>
+          </div>
+        </div>
 
-<%= yield %>
+        <div class="col-xs-6 nav-right">
+          <ul class="navbar-nav pull-right">
+            <% if user_signed_in? %>
+              <li>
+                <ul id="logged-in">
+                  <li><span id="strong-title">Welcome, <%= current_user.name %></span></li>
+                  <li>
+                    <ul id="acct-options">
+                      <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link caps' %></li>
+                      <li> - </li>
+                      <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link caps'  %></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            <% else %>
+              <li>
+                <ul id="not-logged-in">
+                  <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link caps'  %></li>
+                  <li> | </li>
+                  <li> <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link caps'  %></li>
+                </ul>
+              </li>
+            <% end %>
+           </ul>
+         </div>
+       </div>
+
+     </div>
+  </div>
+
+  <div class="container page-content">
+    <div class="row">
+        <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>
