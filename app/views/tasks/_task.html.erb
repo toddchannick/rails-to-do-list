@@ -1,0 +1,8 @@
+<%= content_tag :ul, class: 'tasks' do %>
+  <%= content_tag :li, id: "task-#{task.id}" do %>
+    <%= link_to task, method: :delete, remote: true do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+    <%= task.description %>
+  <% end %>
+<% end %>

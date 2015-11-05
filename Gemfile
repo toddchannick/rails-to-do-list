@@ -59,6 +59,8 @@ gem 'devise'
 
 gem "font-awesome-rails"
 
+gem "animate-rails"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

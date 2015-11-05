@@ -1,0 +1,21 @@
+<div class="list-header">
+	<h3 class="media-heading caps">Weekly Priorities</h3>
+</div>
+
+<div class="cf gray-box">
+	<div class="js-tasks">
+		<%= render @tasks %>
+	</div>
+
+
+  <%= form_for @task, :html => {:class => "to-do-form", :id => "to-do"}, remote: true do |f| %>
+
+	  <div class="form-group">
+	    <%= f.label :task, 'Task', class: 'sr-only' %>
+	    <%= f.text_field :description, autofocus: true, id:'task-input', autocomplete: "off", class: 'task-input form-control', placeholder: 'Enter to-do list item' %>
+			<%= f.submit 'Add', class: 'btn btn-add hvr-icon-grow btn-primary' %>
+	  </div>
+
+  <% end %>
+
+ </div>

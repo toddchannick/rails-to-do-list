@@ -1,0 +1,10 @@
+class Task < ActiveRecord::Base
+  belongs_to :user
+
+  validates :description, presence: true
+
+  #order all tasks by their created_at date, OLDEST first
+  default_scope { order('created_at ASC') }
+
+
+end
