@@ -4,6 +4,6 @@
       <i class="fa fa-trash"></i>
     <% end %>
     <span><%= task.description %></span>
-    <span id="time-remaining"><%= distance_of_time_in_words(task.created_at, task.created_at + 7.days, include_seconds: true) %> left</span>
+    <span id="time-remaining"><%= task.days_left %> days left</span>
   <% end %>
 <% end %>
