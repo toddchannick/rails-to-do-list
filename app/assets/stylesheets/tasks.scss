@@ -64,8 +64,8 @@
   font-size:2em;
   color: black;
   cursor: pointer;
-  float: left;
-  padding-right:2em;
+  margin-right:.5em;
+  transition:all .3s ease-in-out;
 }
 
 .fa-trash:hover {
@@ -74,4 +74,11 @@
 
 .btn-add {
   width:85px;
+}
+
+#time-remaining {
+  float:right;
+  font-size:.8em;
+  font-weight:bold;
+  padding-right:20px;
 }

@@ -3,6 +3,7 @@
     <%= link_to task, method: :delete, remote: true do %>
       <i class="fa fa-trash"></i>
     <% end %>
-    <%= task.description %>
+    <span><%= task.description %></span>
+    <span id="time-remaining"><%= distance_of_time_in_words(task.created_at, task.created_at + 7.days, include_seconds: true) %> left</span>
   <% end %>
 <% end %>

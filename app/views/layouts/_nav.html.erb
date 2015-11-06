@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-10 welcome">
+    <span class="strong-title" id="welcome">Welcome, <strong><%= current_user.name %></strong></span>
+  </div>
+
+  <div class="col-xs-2 right">
+    <div class="menu-toggle" id="drop-nav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <div class="icon-bar">
+        <i class="glyphicon glyphicon-menu-hamburger"></i>
+      </div>
+    </div>
+
+    <div class="my-dropdown dropdown-menu" aria-labelledby="drop-nav">
+      <ul class="nav">
+        <li>
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'caps' %>
+        </li>
+        <li>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'caps'%>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

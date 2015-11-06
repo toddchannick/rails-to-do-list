@@ -1,0 +1,74 @@
+.icon-bar {
+  position:relative;
+  float:right;
+  cursor:pointer;
+  padding:5px;
+  width:38px;
+  padding-bottom:3px !important;
+  margin-bottom: 5px;
+  background-color:rgba(26, 26, 26, 0.35);
+  i {
+    font-size:2em;
+  }
+}
+
+.icon-bar:hover, .icon-bar:active {
+  background-color:rgb(26, 26, 26);
+  transition-duration: .5s;
+}
+
+.welcome {
+  text-align: right;
+  margin-right:0px !important;
+}
+
+.my-dropdown {
+  min-width:0px !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  left:auto !important;
+  right:0px !important;
+  margin-top: 20px !important;
+  border-radius:0px !important;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}
+
+.nav {
+  -webkit-margin-before: 0em !important;
+  -webkit-margin-after: 0em !important;
+  -webkit-padding-start: 0em !important;
+  width:100% !important;
+  text-align:right;
+  margin: 0px !important;
+  padding-right:0px !important;
+}
+
+.nav li {
+  background-image:none !important;
+  background-color:black !important;
+  padding-left:0px !important;
+  width:120px;
+  margin:0px !important;
+}
+
+.nav > li > a {
+  font-size:90%;
+  font-weight:600;
+}
+
+
+.nav > li > a, .nav > li.active > a {
+  background-color:black !important;
+  color:gray !important;
+  text-decoration:none;
+}
+
+.nav > li > a:hover, .nav > li.active > a:hover {
+  background-color:black !important;
+  color:white !important;
+  transition-duration: .5s;
+}
+
+.right {
+  padding-right:0px !important;
+}

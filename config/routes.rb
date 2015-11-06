@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'tasks#new', as: :authenticated_root
+      root 'tasks#show', as: :authenticated_root
       resources :tasks, only: [:create, :destroy]
     end
 
