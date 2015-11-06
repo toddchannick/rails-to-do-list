@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   include ActionView::Helpers::DateHelper
 
   def show
-    @tasks = Task.all
+    @tasks = current_user.tasks
     @task = Task.new
   end
 
@@ -15,9 +15,9 @@ class TasksController < ApplicationController
      @task = Task.new(task_params)
      @task.user = current_user
 
-     @from_time = Time.now
-     @deadline = distance_of_time_in_words(@from_time, 7.days.from_now)
-     puts "NOTICE! Deadline is #{@deadline}"
+     #@from_time = Time.now
+     #@deadline = distance_of_time_in_words(@from_time, 7.days.from_now)
+     #puts "NOTICE! Deadline is #{@deadline}"
 
      if @task.save
        flash[:notice] = "Task was saved."
