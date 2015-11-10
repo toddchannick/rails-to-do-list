@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require jquery.countdown
-//= require jquery.countdown-es
+//= require moment
+//= require countdown
+//= require moment-countdown
 //= require_tree .

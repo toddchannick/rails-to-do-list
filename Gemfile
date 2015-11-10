@@ -61,12 +61,11 @@ gem "font-awesome-rails"
 
 gem "animate-rails"
 
-gem 'jquery-countdown-rails'
-
 gem 'dotiw'
 
 gem 'whenever', :require => false
 
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

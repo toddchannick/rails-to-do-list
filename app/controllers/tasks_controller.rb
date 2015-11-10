@@ -9,10 +9,6 @@ class TasksController < ApplicationController
    @task = Task.new(task_params)
    @task.user = current_user
 
-   #@from_time = Time.now
-   #@deadline = @from_time + 7.days
-   #puts "NOTICE! Deadline is #{@deadline}"
-
    if @task.save
      flash[:notice] = "Task was saved."
    else
