@@ -19,7 +19,13 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700,800,300italic,400italic,600italic,700italic,800italic);
 
+html {
+  position:relative;
+  min-height: 100%;
+}
+
 body {
+  margin: 0 0 6em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -230,4 +236,40 @@ input, textarea, select, a {
   width:500px;
   margin-left:auto;
   margin-right:auto;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height:3em;
+  line-height:1em;
+  width:100% !important;
+  padding: 1em;
+  background-color: rgba(26,26,26,.4);
+  text-align: center;
+}
+
+#footer-text {
+	font-size:.9em;
+	float:right;
+  padding-right:20px;
+	color:white;
+	font-weight:250;
+}
+
+#social {
+	font-size:1.2em;
+	margin-left:1em;
+}
+
+.social {
+	color:#1DBC77;
+	transition:.2s all;
+	cursor:pointer;
+}
+
+.social:hover {
+	color:#137A4D;
 }
