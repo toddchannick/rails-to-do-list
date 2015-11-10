@@ -1,0 +1,21 @@
+<div class="list-header">
+  <h3 class="media-heading caps"><%= @user.name %></h3>
+</div>
+
+<div class="cf gray-box">
+  <ul class="profile-ul">
+    <li>
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      <strong>Member Since:</strong>
+      <span class="profile-list"><%= @created_date %></span>
+    </li>
+    <li>
+      <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+      <strong> Current Tasks: </strong>
+        <%= link_to authenticated_root_path, :class => 'caps' do %>
+          <span class="profile-list"><%= @user.tasks.count %> tasks</span>
+        <% end %>
+    </li>
+
+  </ul>
+</div>

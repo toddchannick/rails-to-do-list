@@ -14,6 +14,9 @@
     <div class="my-dropdown dropdown-menu" aria-labelledby="drop-nav">
       <ul class="nav">
         <li>
+            <%= link_to 'My profile', user_path(current_user), :class => 'caps' %>
+        </li>
+        <li>
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'caps' %>
         </li>
         <li>
