@@ -15,7 +15,7 @@
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
         <strong> Current Tasks: </strong>
           <%= link_to authenticated_root_path, :class => 'caps' do %>
-            <span class="profile-list"><%= @user.tasks.count %> tasks</span>
+            <span class="profile-list"><%= pluralize(@user.tasks.count,'task') %></span>
           <% end %>
       </li>
 
