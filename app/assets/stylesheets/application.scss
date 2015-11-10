@@ -133,8 +133,15 @@ body {
   }
 }
 
-#strong-title {
-  color:white;
+#strong-title a {
+  color:white !important;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+#strong-title a:hover {
+  color:black !important;
 }
 
 .caps {

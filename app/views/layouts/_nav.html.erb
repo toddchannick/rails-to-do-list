@@ -1,6 +1,10 @@
 <div class="row">
   <div class="col-xs-10 welcome">
-    <span class="strong-title" id="welcome">Welcome, <strong><%= current_user.name %></strong></span>
+    <span id="strong-title">Welcome,
+      <%= link_to user_path(current_user) do %>
+        <strong><%= current_user.name %></strong>
+      <% end %>
+    </span>
   </div>
 
   <div class="col-xs-2 right">
