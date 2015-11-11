@@ -19,33 +19,30 @@
 @import "font-awesome";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700,800,300italic,400italic,600italic,700italic,800italic);
 
-html {
-  position:relative;
-  min-height: 100%;
-}
-
-body {
-  margin: 0 0 6em;
-  font-family: 'Open Sans', sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-html {
-  height:100%;
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
 }
 
 body {
-  padding-top:12em;
-  min-height: 100%;
-  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 12em !important;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)),
     image-url('subtle_dots_two.png');
+}
+
+.wrapper {
+  position:relative;
+  min-height:100% !important;
 }
 
 
@@ -113,6 +110,7 @@ body {
 .page-content {
   position:relative;
   padding-top:15px;
+  padding-bottom:3.5em;
   width:80%;
   margin-left:auto;
   margin-right:auto;
