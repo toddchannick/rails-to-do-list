@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Priorit-Ease</title>
+  <title>PrioritEase</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag 'icon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,17 +14,14 @@
     <div class="navbar navbar-fixed-top top-bar">
 
       <div class="row">
-        <div class="nav-left col-xs-6">
-          <a class="navbar-brand" href="/">
-            <i class="fa fa-calendar-check-o"></i>
-          </a>
-          <div class="media">
-            <h2 class="media-heading caps shadow">Priorit<span id="spaced">ease</span></h2>
-            <span class="sub-text">Simplified to-do lists for the busy mind</span>
+
+        <div class="nav-left col-xs-8">
+          <div class="main-logo">
+            <a id="link-home" href="/"></a>
           </div>
         </div>
 
-        <div class="col-xs-6 nav-right">
+        <div class="col-xs-4 nav-right">
           <% if user_signed_in? %>
             <%= render partial: 'layouts/nav' %>
           <% else %>

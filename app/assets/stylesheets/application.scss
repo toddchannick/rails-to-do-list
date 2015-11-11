@@ -38,8 +38,8 @@ html {
 }
 
 body {
-  padding-top:10em;
-  height:100%;
+  padding-top:12em;
+  min-height:400px !important;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
   background-image:
@@ -47,18 +47,18 @@ body {
     image-url('subtle_dots_two.png');
 }
 
+
 .navbar-nav {
   margin-bottom:0px !important;
 }
 
 
 .top-bar {
-  min-width:695px;
+  min-width:777px;
   padding-left:20px;
   padding-right:20px;
-  padding-top: 15px;
-  padding-bottom:8px;
-  border-radius:0px !important;
+  padding-top: 10px;
+  border-radius:0px;
   background-color: #71D690 !important;
   color:white;
   font-weight:400;
@@ -71,17 +71,19 @@ body {
   }
 }
 
-.nav-left {
+
+.main-logo {
   position:relative;
-  padding-top: 15px;
-  a {
-    position:relative;
-    float:left;
-  }
+  padding-top:10px;
+   background: image-url('todo-logo.png');
+   background-size: auto;
+   height:100px !important;
+   width:496px !important;
 }
 
 .nav-right {
   padding-top: 15px;
+  padding-bottom: 15px !important;
   li {
     padding-left:5px;
     display:inline-block;
@@ -89,12 +91,23 @@ body {
   }
 }
 
-.navbar-brand {
+.brand {
+  text-align:center;
   i {
-    font-size: 2em;
-    padding-bottom:5px;
+    position:relative;
+    font-size: 3.5em;
+  }
+  i:hover {
+    color:rgba(26, 26, 26, 1);
   }
 }
+
+.logo {
+  vertical-align: middle !important;
+  padding-top:10px !important;
+  padding-left:25px !important;
+}
+
 
 .page-content {
   position:relative;
@@ -158,8 +171,6 @@ body {
 
 #spaced {
   font-weight:200;
-  font-style: italic;
-  margin-left:4px;
   letter-spacing: 3.5px;
 }
 
@@ -272,11 +283,30 @@ input, textarea, select, a {
 }
 
 .social {
-	color:#1DBC77;
+	color:#71D690;
 	transition:.2s all;
 	cursor:pointer;
 }
 
 .social:hover {
 	color:#137A4D;
+}
+
+.gray-box {
+  width: 500px;
+  margin-top:1.5em;
+  margin-left:auto;
+  margin-right:auto;
+  background: rgba(238,238,238,0.8);
+  border-radius: 4px;
+  padding: 2em;
+  padding-top:2.4em;
+}
+
+#link-home {
+  position:absolute;
+  top:25px;
+  left:35px;
+  width:55px;
+  height:58px;
 }

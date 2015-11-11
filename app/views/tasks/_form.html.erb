@@ -3,7 +3,9 @@
   <div class="form-group">
     <%= f.label :task, 'Task', class: 'sr-only' %>
     <%= f.text_field :description, autofocus: true, id:'task-input', autocomplete: "off", class: 'task-input form-control', placeholder: 'Enter to-do list item' %>
-    <%= f.submit 'Add', class: 'btn btn-add hvr-icon-grow btn-primary' %>
+    <%= f.button :submit, class: 'btn btn-add hvr-icon-float btn-primary' do %>
+      <span id="label">Add</span>
+    <% end %>
   </div>
 
 <% end %>
