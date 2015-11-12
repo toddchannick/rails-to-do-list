@@ -14,4 +14,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
+  #API Routing
+  namespace :api, defaults: { format: :json } do
+    resources :users
+  end
+
+
 end
