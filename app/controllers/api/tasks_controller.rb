@@ -1,4 +1,4 @@
-class Api::TasksController < Api::BaseController
+class Api::TasksController < ApiController
    before_action :authenticated?
 
    def index
