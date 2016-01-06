@@ -20,7 +20,8 @@ end
 admin = User.new(
    name:     'Todd Channick',
    email:    'toc5012@gmail.com',
-   password: 'password'
+   password: 'password',
+   admin: true
 )
 admin.save
 

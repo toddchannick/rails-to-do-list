@@ -12,9 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require sortable
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require moment
 //= require countdown
 //= require moment-countdown
 //= require_tree .
+
+
+$(document).ready(function(){
+  $('.sortable').sortable();
+});

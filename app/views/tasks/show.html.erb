@@ -3,8 +3,10 @@
 </div>
 
 <div class="cf gray-box">
-	<div class="js-tasks">
-		<%= render @tasks %>
+	<div>
+		<ul class="js-tasks tasks sortable">
+			<%= render @tasks %>
+		</ul>
 	</div>
 
 	<%= render 'form', task: Task.new %>

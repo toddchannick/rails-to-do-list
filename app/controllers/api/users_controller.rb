@@ -1,5 +1,6 @@
 class Api::UsersController < ApiController
    before_filter :authenticated?
+   before_filter :admin?
 
    def index
      users = User.all
@@ -14,9 +15,15 @@ class Api::UsersController < ApiController
    def create
      user = User.new(user_params)
      if user.save
-       render json: user
+       render json: {
+         status: 200,
+         message: "Successfully Created New User"
+         user: user
+       }
      else
-       render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+       render json: {
+         errors: user.errors.full_messages
+         }, status: :unprocessable_entity
      end
    end
 

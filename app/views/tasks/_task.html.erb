@@ -1,9 +1,10 @@
-<%= content_tag :ul, class: 'tasks' do %>
+
   <%= content_tag :li, id: "task-#{task.id}" do %>
-    <%= link_to task, method: :delete, remote: true do %>
-      <i class="fa fa-trash"></i>
-    <% end %>
-    <span><%= task.description %></span>
-    <span id="time-remaining"><%= task.days_left %> days left</span>
+    <div id="icon">
+      <%= link_to task, method: :delete, remote: true do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </div>
+    <div id="task-desc"><span id="text"><%= task.description %></span></div>
+    <div id="time-remaining"><%= task.days_left %> days left</div>
   <% end %>
-<% end %>

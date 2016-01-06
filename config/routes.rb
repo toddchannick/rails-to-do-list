@@ -16,9 +16,11 @@ Rails.application.routes.draw do
 
   #API Routing
   namespace :api, defaults: { format: :json } do
-    resources :users
     resources :tasks, only: [:index, :show, :update, :create, :destroy]
+    resources :users
   end
+
+  get 'api' => 'api/users#index'
 
 
 end

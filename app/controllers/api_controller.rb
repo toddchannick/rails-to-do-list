@@ -14,6 +14,12 @@ class ApiController < ApplicationController
 
  private
 
+ def admin?
+   unless @logged_user.admin?
+     render json: {error: "Not Authorized", status: 403}, status: 403
+   end
+ end
+
  def authenticated?
    authenticate_or_request_with_http_basic do |email, password|
      @logged_user = User.find_by_email(email)
